@@ -29,6 +29,10 @@ Route::get('about', [AboutController::class,'about']);
 Route::get('articles/{id}', [ArticleController::class,'articles']);
 Route::resource('photos', PhotoController::class);
 
+// Praktikum 3
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']); 
+
 
 
 
@@ -78,3 +82,13 @@ Route::get('/user/{name?}', function ($name='Solikhin') {
     Route::resource('photos', PhotoController::class)->except([ 
     'create', 'store', 'update', 'destroy' 
     ]); 
+    
+// Praktikum 3
+    // Route::get('/greeting', function () { 
+    //     return view('hello', ['name' => 'Solikhin']); 
+    //     }); 
+    // Route::get('/greeting', function () { 
+    //     return view('blog.hello', ['name' => 'Solikhin']); 
+    //     });
+
+    
